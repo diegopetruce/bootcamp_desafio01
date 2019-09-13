@@ -12,6 +12,10 @@ const projects = [];
 
 let numberOfRequests = 0;
 
+///middleware de contagem de requisições
+
+server.use(logRequests);
+
 ///Midleware de checagem de projeto
 function checkProjectExists(req, res, next) {
   const { id } = req.params;
